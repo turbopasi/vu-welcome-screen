@@ -1,0 +1,12 @@
+{
+  "Name": "vu-welcome-screen",
+  "Description": "Displays a welcome screen for joining player, with markdown",
+  "Version": "0.0.16",
+  "HasVeniceEXT": true,
+  "HasWebUI": true,
+  "Authors": [ "turbopasi", "Ch33s3" ],
+  "Dependencies": {
+    "veniceext": "^1.0.0"
+  },
+  "Tags": ["superturds-enhanced"]
+}
