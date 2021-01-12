@@ -2,45 +2,39 @@ export const state = {
   config : {
 
     // GENERAL STYLES
-    overlayBackgroundColor        : '#0000FF',
-    overlayOpacity                : 0.2,
+    overlayBackgroundColor        : '#000000',
+    overlayOpacity                : 0.9,
     screenBackgroundColor         : '#000000',
     screenTextColor               : '#ffffff',
     screenOpacity                 : 0.8,
     
     // BUTTON STYLES
     buttonsTextColor              : '#ffffff',
-    buttonsTextOpacity            : 0.9,
+    buttonsTextOpacity            : 0.7,
     buttonsBackgroundColor        : '#000000',
-    buttonsBackgroundOpacity      : 0.9,
+    buttonsBackgroundOpacity      : 0,
     buttonsBorderColor            : '#ffffff',
-    buttonsBorderOpacity          : 0.9,
+    buttonsBorderOpacity          : 0.7,
+
+    buttonWidth                   : 200,
 
     // ACTIVE BUTTON STYLES
-    activeButtonsTextColor              : '#FF0000',
+    activeButtonsTextColor              : '#000000',
     activeButtonsTextOpacity            : 0.9,
-    activeButtonsBackgroundColor        : '#000000',
+    activeButtonsBackgroundColor        : '#FFFFFF',
     activeButtonsBackgroundOpacity      : 0.9,
-    activeButtonsBorderColor            : '#FF0000',
+    activeButtonsBorderColor            : '#FFFFFF',
     activeButtonsBorderOpacity          : 0.9,
     
-    // BUTTON ON-HOVER STYLES
-    buttonsHoverTextColor         : '#ffffff',
-    buttonsHoverTextOpacity       : 1,
-    buttonsHoverBackgroundColor   : '#000000',
-    buttonsHoverBackgroundOpacity : 1,
-    buttonsHoverBorderColor       : '#439fe0',
-    buttonsHoverBorderOpacity     : 1,
-    
     // CLOSE BUTTON & AND BEHAVIOUR
-    closeButtonText               : 'exit',
-    closeAutomatic                : true,
-    closeAutomaticSeconds         : 5,
+    closeButtonText               : 'CLOSE',
     
     // TABS
-    tabs : []
+    tabs : [
+
+    ]
   },
-  active    : false,
+  active    : true,
   activeTab : 0
 };
 

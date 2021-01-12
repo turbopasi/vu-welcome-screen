@@ -1,6 +1,7 @@
 <template>
   <div
     id="app"
+    v-if="active"
     :style="{
       background : hexToRgbaString(config.overlayBackgroundColor, config.overlayOpacity)
     }">
@@ -18,10 +19,12 @@
           :key="'tab-' + index"
           :class="{ 'is-active' : index === activeTab }"
           :style="index === activeTab ? {
+            width       : config.buttonWidth + 'px',
             borderColor : hexToRgbaString(config.activeButtonsBorderColor , config.activeButtonsBorderOpacity),
             background  : hexToRgbaString(config.activeButtonsBackgroundColor, config.activeButtonsBackgroundOpacity),
             color       : hexToRgbaString(config.activeButtonsTextColor, config.activeButtonsTextOpacity)
           } : {
+            width       : config.buttonWidth + 'px',
             borderColor : hexToRgbaString(config.buttonsBorderColor , config.buttonsBorderOpacity),
             background  : hexToRgbaString(config.buttonsBackgroundColor, config.buttonsBackgroundOpacity),
             color       : hexToRgbaString(config.buttonsTextColor, config.buttonsTextOpacity)
@@ -33,6 +36,7 @@
         <div
           class="tab-menu-button"
           :style="{
+            width       : config.buttonWidth + 'px',
             borderColor : hexToRgbaString(config.buttonsBorderColor , config.buttonsBorderOpacity),
             background  : hexToRgbaString(config.buttonsBackgroundColor, config.buttonsBackgroundOpacity),
             color       : hexToRgbaString(config.buttonsTextColor, config.buttonsTextOpacity)
@@ -51,7 +55,8 @@
           background : hexToRgbaString(config.screenBackgroundColor, config.screenOpacity),
           color      : config.screenTextColor
         }">
-        <vue-markdown :source="config.tabs[activeTab] ? config.tabs[activeTab].text : '_no-content_'"></vue-markdown>
+        <!-- <vue-markdown :source="config.tabs[activeTab] ? config.tabs[activeTab].text : '_no-content_'"></vue-markdown> -->
+        <div class="htmlviewer"  v-html="config.tabs[activeTab] ? config.tabs[activeTab].text : ''"></div>
       </div>
 
     </div>
@@ -79,7 +84,6 @@ export default {
       WebUI.Call('DispatchEventLocal', 'WelcomeScreenReady', 1)
     },
     hexToRgbaString(hex, opacity) {
-      console.log("test")
       const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
       hex = hex.replace(shorthandRegex, function(m, r, g, b) {
         return r + r + g + g + b + b;
@@ -171,15 +175,7 @@ export default {
   display : flex;
 }
 
-.inner {
-  flex: 1;
-  padding : 20px;
-  overflow:hidden;
-}
 
-.inner a {
-  color : cyan
-}
 
 .tab-menu {
   margin-right  : 10px;
@@ -191,7 +187,7 @@ export default {
 .tab-menu-button {
   font-size                 : 20px;
   padding                   : 7px 15px;
-  width                     : 170px;
+
   border                    : 2px solid;
   margin-bottom             : 10px;
   font-family               : 'Blinker';
@@ -223,6 +219,35 @@ export default {
 
 .tab-menu-button:last-of-type:hover {
   margin-bottom:0px;
+}
+
+/* 
+
+HTML VIEWER
+
+ */
+
+.inner {
+  flex: 1;
+  padding : 20px;
+  overflow-y:scroll;
+}
+
+.inner a {
+  color : cyan
+}
+
+.htmlviewer {
+  white-space: pre-line
+
+}
+
+.htmlviewer img {
+  max-width : 100%;
+  max-height:100%;
+  margin-top:15px;
+  margin-bottom:10px;
+  border-radius:5px;
 }
 
 </style>
