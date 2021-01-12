@@ -4,12 +4,13 @@ VU _/vi:ju:/_ is a community-oriented Battlefield 3 modding platform that gives 
 ⚡ **WORK IN PROGRESS** while the mod is still in development , the first stable [release](https://github.com/turbopasi/vu-welcome-screen/releases) can already be used on your VU-BF3 Server. Please let us know about any issues or questions.
 
 ### Features
-- VU-like styles and look
+- General VU-like styles and look
 - Customizable colors
-- Content supports **Markdown** and **HTML**
+- Content supports and renders **HTML**
 - Content supports 😀⭐🦀 Emojis
 - Multiple Tabs
-- Easy configs
+- Content fetching from external source possible
+- Easy config
 
 ### Screenshots
 ![Screenshot-1](https://i.imgur.com/YX20P4Z.jpg)
@@ -26,5 +27,24 @@ Go to [Releases](https://github.com/turbopasi/vu-welcome-screen/releases), downl
 		
 ```
 Also add `vu-welcome-screen` to your `modlist.txt`.
+
 ## How to develop / contribute
-Coming soon 
+
+```
+git clone https://github.com/turbopasi/vu-welcome-screen
+cd vu-welcome-screen
+cd ui
+npm install
+```
+Then start the dev server
+```
+cd vu-welcome-screen
+cd ui
+npm run serve
+```
+Then build and generate ui.vuic  file
+```
+cd vu-welcome-screen
+cd ui
+npm run build
+```
