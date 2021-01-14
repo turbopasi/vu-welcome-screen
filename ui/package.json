@@ -7,7 +7,9 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "node-html-parser": "^2.0.2",
     "vue": "^2.6.11",
     "vue-markdown": "^2.1.2"
   },

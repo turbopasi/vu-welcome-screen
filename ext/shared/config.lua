@@ -31,7 +31,12 @@ return {
 
   closeButtonText                     = 'close',
 
+  -- EXTERNAL DATA SOURCE
+  useExternalSource                   = true,
+  externalSource                      = 'https://raw.githubusercontent.com/turbopasi/vu-server-assets/main/server/1/welcome-screen.html',
+
   -- TABS
+  -- IF EXTERNAL SOURCE IS USED, THIS WILL BE REPLACED
   tabs = {
     require('__shared/tabs/tab1.lua'),
     require('__shared/tabs/tab2.lua')

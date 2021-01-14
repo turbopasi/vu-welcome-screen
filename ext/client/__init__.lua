@@ -24,11 +24,19 @@ end)
 
 Events:Subscribe('WelcomeScreenReady', function(data)
 
-  print('Welcome screen ready')
-  local dataJson = json.encode(config);
-  print(dataJson)
-  WebUI:ExecuteJS('vext.setConfig(' .. dataJson .. ');')
-  print('Successfully sent text to WebUI')
+  -- if use of external source, perform request
+  if(config.useExternalSource) and (config.externalSource ~= "") then
+    local HttpResponse = Net:GetHTTP(config.externalSource)
+    if(HttpResponse) and (HttpResponse.body) then
+      config.tabs = HttpResponse.body
+    end
+  end
+
+  -- encode to json string
+  local configJson = json.encode(config);
+
+  -- execute method in WebUI 
+  WebUI:ExecuteJS('vext.setConfig(' .. configJson .. ');')
 
   -- bring ui to front and enable ui-mouse/ disable ui-keyboard
   WebUI:BringToFront()

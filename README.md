@@ -51,22 +51,24 @@ npm run build
 
 ## Loading content from external source
 
-You can add your own custom api endpoint to the config to enable an external data source for the welcome screen. 
-Just make sure the endpoint returns the payload in the correct format (`json / Array of tabs`): 
-```json
-[
-	{
-		"label" : "Tab 1",
-		"text"  : "<h1>Tab 1 Header</h1>"
-	},
-	{
-		"label" : "Tab 2",
-		"text"  : "<h1>Tab 2 Header</h1>"
-	},
-	,
-	{
-		"label" : "Tab 3",
-		"text"  : "<h1>Tab 2 Header</h1>"
-	}
-]
+You can add your own url (`externalSource`) to the config to enable an external data source for the welcome screen. 
+Just make sure the url returns the correct format : 
+```html
+<tab>
+  <label>💻 Server Info</label>
+  <content>
+    <h1>Server Info</h1>
+    Welcome to Superturds VU Server Experience ! <br>
+		<i> This is some </i> example <strong> HTML content </strong>.
+  </content>
+</tab>
+      
+<tab>
+  <label>🐞 Known Bugs</label>
+  <content>
+    <h1>Known Bugs</h1>
+  </content>
+</tab>
 ```
+
+## Loading content from mod config (locally)

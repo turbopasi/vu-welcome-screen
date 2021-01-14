@@ -1,3 +1,5 @@
+import { parse } from 'node-html-parser';
+
 export const state = {
   config : {
 
@@ -29,19 +31,50 @@ export const state = {
     // CLOSE BUTTON & AND BEHAVIOUR
     closeButtonText               : 'CLOSE',
     
+    // EXTERNAL DATA SOURCE
+    useExternalSource             : true,
+    externalSource                : '',
+
     // TABS
     tabs : [
 
     ]
+
   },
-  active    : true,
+  active    : false,
   activeTab : 0
 };
 
 export const vext = {
   setConfig : (data) => {
-    state.config = data;
-    state.active = true;
+
+    console.log(data);
+
+    // IF EXTERNAL SOURCE IS USED, WE NEED TO PARSE TABS
+    if (data.useExternalSource && data.tabs != "") {
+
+      let readyTabs = [];
+      const root = parse(data.tabs);
+      const tabs = root.querySelectorAll('tab');
+      for(let tab of tabs) {
+        let label = tab.querySelector('label');
+        let text = tab.querySelector('content');
+        readyTabs.push({
+          label : label.text,
+          text : text.innerHTML
+        });
+      }
+      data.tabs = readyTabs;
+      state.config = data;
+      state.active = true;
+
+    } else {
+
+      state.config = data;
+      state.active = true;
+
+    }
+
   }
 }
 

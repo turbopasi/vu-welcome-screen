@@ -1,7 +1,6 @@
 <template>
   <div
     id="app"
-    v-if="active"
     :style="{
       background : hexToRgbaString(config.overlayBackgroundColor, config.overlayOpacity)
     }">
@@ -175,8 +174,6 @@ export default {
   display : flex;
 }
 
-
-
 .tab-menu {
   margin-right  : 10px;
   box-sizing    : border-box;
@@ -235,11 +232,6 @@ HTML VIEWER
 
 .inner a {
   color : cyan
-}
-
-.htmlviewer {
-  white-space: pre-line
-
 }
 
 .htmlviewer img {
