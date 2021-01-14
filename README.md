@@ -12,10 +12,21 @@ VU _/vi:ju:/_ is a community-oriented Battlefield 3 modding platform that gives 
 - Content fetching from external source possible
 - Easy config
 
+### Table of contents
+- [VU Welcome Screen Mod](#vu-welcome-screen-mod)
+		- [Features](#features)
+		- [Table of contents](#table-of-contents)
+		- [Screenshots](#screenshots)
+	- [How to use / Add to VU server](#how-to-use--add-to-vu-server)
+	- [How to develop / contribute](#how-to-develop--contribute)
+	- [Loading content from external source](#loading-content-from-external-source)
+	- [Loading content from mod config (locally)](#loading-content-from-mod-config-locally)
+
 ### Screenshots
 ![Screenshot-1](https://i.imgur.com/YX20P4Z.jpg)
 ![Screenshot-2](https://i.imgur.com/gQgE0SX.jpg)
-## How to use
+
+## How to use / Add to VU server
 Go to [Releases](https://github.com/turbopasi/vu-welcome-screen/releases), download the latest release of the mod and add the `vu-welcome-screen` folder to your server directory structure:
 ```bash
 	Server/
