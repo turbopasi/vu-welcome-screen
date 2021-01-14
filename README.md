@@ -13,14 +13,10 @@ VU _/vi:ju:/_ is a community-oriented Battlefield 3 modding platform that gives 
 - Easy config
 
 ### Table of contents
-- [VU Welcome Screen Mod](#vu-welcome-screen-mod)
-		- [Features](#features)
-		- [Table of contents](#table-of-contents)
-		- [Screenshots](#screenshots)
-	- [How to use / Add to VU server](#how-to-use--add-to-vu-server)
-	- [How to develop / contribute](#how-to-develop--contribute)
-	- [Loading content from external source](#loading-content-from-external-source)
-	- [Loading content from mod config (locally)](#loading-content-from-mod-config-locally)
+- [How to use / Add to VU server](#how-to-use--add-to-vu-server)
+- [How to develop / contribute](#how-to-develop--contribute)
+- [Loading content from external source](#loading-content-from-external-source)
+- [Loading content from mod config (locally)](#loading-content-from-mod-config-locally)
 
 ### Screenshots
 ![Screenshot-1](https://i.imgur.com/YX20P4Z.jpg)
