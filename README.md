@@ -58,8 +58,9 @@ Just make sure the url returns the correct format :
   <label>💻 Server Info</label>
   <content>
     <h1>Server Info</h1>
-    Welcome to Superturds VU Server Experience ! <br>
-		<i> This is some </i> example <strong> HTML content </strong>.
+		Here goes your HTML Content<br>
+		<i> This is some </i> example <strong>HTML content</strong>.
+		It does also support ⭐🥨🚚 Emojis !
   </content>
 </tab>
       
@@ -72,3 +73,20 @@ Just make sure the url returns the correct format :
 ```
 
 ## Loading content from mod config (locally)
+
+If you wish to add the tabs content through the mods configuration, just add a `tab.lua` file under `ext/shared/tabs/` in the following format: 
+```lua
+return {
+  label = "💻 Server Info",
+  text = [[
+  <h1>Server Info</h1>
+	Here goes your HTML Content<br>
+  ]]
+}
+```
+Then, in `ext/shared/config.lua` add the following line under `tabs`:
+```lua
+tabs = {
+	require('__shared/tabs/tab.lua')
+}
+```
