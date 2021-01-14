@@ -15,7 +15,7 @@ return {
   buttonsTextColor              = '#ffffff',
   buttonsTextOpacity            = 0.7,
   buttonsBackgroundColor        = '#000000',
-  buttonsBackgroundOpacity      = 0,
+  buttonsBackgroundOpacity      = 0.7,
   buttonsBorderColor            = '#ffffff',
   buttonsBorderOpacity          = 0.7,
 
@@ -29,7 +29,7 @@ return {
   activeButtonsBorderColor            = '#ffffff',
   activeButtonsBorderOpacity          = 0.9,
 
-  closeButtonText                     = 'close',
+  closeButtonText                     = 'CLOSE',
 
   -- EXTERNAL DATA SOURCE
   useExternalSource                   = true,

@@ -1,16 +1,8 @@
 local config = require('__shared/config.lua')
 
-
 -- ++++++++++++++++ --
 -- VEXT EVENTS      --
 -- ++++++++++++++++ --
-
--- Events:Subscribe('Extension:Loaded', function()
---   print('Extension Loaded')
---   print('Initialized WebUI')
---   WebUI:Init()
---   WebUI:Hide()
--- end)
 
 Events:Subscribe('Level:Loaded', function()
   print('Showing WebUI')

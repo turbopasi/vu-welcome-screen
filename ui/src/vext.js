@@ -5,7 +5,7 @@ export const state = {
 
     // GENERAL STYLES
     overlayBackgroundColor        : '#000000',
-    overlayOpacity                : 0.9,
+    overlayOpacity                : 0.5,
     screenBackgroundColor         : '#000000',
     screenTextColor               : '#ffffff',
     screenOpacity                 : 0.8,
@@ -14,7 +14,7 @@ export const state = {
     buttonsTextColor              : '#ffffff',
     buttonsTextOpacity            : 0.7,
     buttonsBackgroundColor        : '#000000',
-    buttonsBackgroundOpacity      : 0,
+    buttonsBackgroundOpacity      : 0.7,
     buttonsBorderColor            : '#ffffff',
     buttonsBorderOpacity          : 0.7,
 
