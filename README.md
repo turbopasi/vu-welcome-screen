@@ -58,9 +58,9 @@ Just make sure the url returns the correct format :
   <label>💻 Server Info</label>
   <content>
     <h1>Server Info</h1>
-		Here goes your HTML Content<br>
-		<i> This is some </i> example <strong>HTML content</strong>.
-		It does also support ⭐🥨🚚 Emojis !
+    Here goes your HTML Content<br>
+    <i> This is some </i> example <strong>HTML content</strong>.
+    It does also support ⭐🥨🚚 Emojis !
   </content>
 </tab>
       
@@ -87,6 +87,6 @@ return {
 Then, in `ext/shared/config.lua` add the following line under `tabs`:
 ```lua
 tabs = {
-	require('__shared/tabs/tab.lua')
+  require('__shared/tabs/tab.lua')
 }
 ```
