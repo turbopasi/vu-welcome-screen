@@ -6,7 +6,7 @@ return {
 
   -- GENERAL STYLES
   overlayBackgroundColor        = '#000000',
-  overlayOpacity                = 0.9,
+  overlayOpacity                = 0.5,
   screenBackgroundColor         = '#000000',
   screenTextColor               = '#ffffff',
   screenOpacity                 = 0.8,
