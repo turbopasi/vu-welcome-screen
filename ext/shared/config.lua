@@ -33,7 +33,7 @@ return {
 
   -- EXTERNAL DATA SOURCE
   useExternalSource                   = true,
-  externalSource                      = 'https://raw.githubusercontent.com/turbopasi/vu-server-assets/main/server/1/welcome-screen.html',
+  externalSource                      = 'https://raw.githubusercontent.com/turbopasi/vu-welcome-screen/master/assets/example.html',
 
   -- TABS
   -- IF EXTERNAL SOURCE IS USED, THIS WILL BE REPLACED
