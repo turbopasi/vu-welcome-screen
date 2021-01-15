@@ -5,7 +5,6 @@ local config = require('__shared/config.lua')
 -- ++++++++++++++++ --
 
 Events:Subscribe('Level:Loaded', function()
-  print('Showing WebUI')
   WebUI:Init()
   WebUI:Show()
 end)

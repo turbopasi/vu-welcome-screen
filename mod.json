@@ -1,7 +1,7 @@
 {
   "Name": "vu-welcome-screen",
   "Description": "Displays a welcome screen for joining player",
-  "Version": "0.0.16",
+  "Version": "1.0.0",
   "HasVeniceEXT": true,
   "HasWebUI": true,
   "Authors": [ "turbopasi" ],
