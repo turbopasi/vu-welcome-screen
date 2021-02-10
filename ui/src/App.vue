@@ -32,17 +32,6 @@
           {{ tab.label }}
         </div>
         <div style="flex:1"></div>
-        <div
-          class="tab-menu-button"
-          :style="{
-            width       : config.buttonWidth + 'px',
-            borderColor : hexToRgbaString(config.buttonsBorderColor , config.buttonsBorderOpacity),
-            background  : hexToRgbaString(config.buttonsBackgroundColor, config.buttonsBackgroundOpacity),
-            color       : hexToRgbaString(config.buttonsTextColor, config.buttonsTextOpacity)
-          }"
-          @click="closeWelcomeScreen">
-          {{ config.closeButtonText }}
-        </div>
       </div>
 
       <!--                       -->
@@ -58,6 +47,17 @@
         <div class="htmlviewer"  v-html="config.tabs[activeTab] ? config.tabs[activeTab].text : ''"></div>
       </div>
 
+    </div>
+    <div
+      class="close-menu-button"
+      :style="{
+        width       : '90px',
+        borderColor : hexToRgbaString(config.buttonsBorderColor , config.buttonsBorderOpacity),
+        background  : hexToRgbaString(config.buttonsBackgroundColor, config.buttonsBackgroundOpacity),
+        color       : hexToRgbaString(config.buttonsTextColor, config.buttonsTextOpacity)
+      }"
+      @click="closeWelcomeScreen">
+      {{ config.closeButtonText }}
     </div>
   </div>
 </template>
@@ -148,9 +148,18 @@ export default {
   padding : 0;
 }
 
-/* body {
-  background : url('./assets/bg.jpg')
-} */
+body::after {
+    content: "";
+    background : url('./assets/bg.png');
+    background-size: cover;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
 
 #app {
   font-family: 'Blinker';
@@ -215,6 +224,46 @@ export default {
 }
 
 .tab-menu-button:last-of-type:hover {
+  margin-bottom:0px;
+}
+
+.close-menu-button {
+  position					: relative;
+  top						: 43px;
+  left						: 100px;
+  font-size                 : 20px;
+  padding                   : 7px 15px;
+  
+  border                    : 2px solid;
+  margin-bottom             : 10px;
+  font-family               : 'Blinker';
+  box-sizing                : border-box;
+  transition                : all 0.2s;
+  text-transform            : uppercase;
+  overflow:hidden;
+}
+
+.close-menu-button:last-of-type {
+  margin-bottom:0px;
+}
+
+.close-menu-button.is-active {
+  border : 2px solid rgba(56, 135, 185,1);
+  color:  rgb(255, 255, 255)
+}
+
+.close-menu-button:hover {
+  border : 2px solid rgba(255,255,255,1);
+  margin-bottom : 10px;
+  font-family: 'Blinker';
+  color: rgba(255,255,255,1);
+  box-sizing: border-box;
+   -moz-box-shadow:    inset 0 0 10px white;
+   -webkit-box-shadow: inset 0 0 10px white;
+   box-shadow:         inset 0 0 10px white;
+}
+
+.close-menu-button:last-of-type:hover {
   margin-bottom:0px;
 }
 
